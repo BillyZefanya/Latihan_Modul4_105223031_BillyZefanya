@@ -1,0 +1,103 @@
+/* ====== Style Umum ====== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #42a5f5, #26c6da, #43e97b, #f5d020);
+    background-size: 1200% 1200%;
+    animation: rgbFlow 20s ease infinite;
+}
+
+/* ====== Animasi Background RGB ====== */
+@keyframes rgbFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ====== Section Profil ====== */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px;
+    margin: 60px auto;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    transform: scale(1.02);
+}
+
+/* ====== Foto Profil ====== */
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+/* ====== Informasi Profil ====== */
+.profile-info {
+    max-width: 550px;
+    text-align: left;
+}
+
+.profile-info h1 {
+    font-size: 1.9rem;
+    color: #212121;
+}
+
+.profile-info span {
+    color: #1976d2;
+}
+
+.intro {
+    color: #444;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* ====== Logo Kampus ====== */
+.logo-kampus {
+    width: 100px;
+    margin-top: 20px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo-kampus:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ====== Responsif untuk Mobile ====== */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .logo-kampus {
+        margin: 0 auto;
+    }
+}
